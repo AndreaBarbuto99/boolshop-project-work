@@ -1,0 +1,14 @@
+{
+    "private": true,
+    "workspaces": [
+        "back-end",
+        "front-end"
+    ],
+    "scripts": {
+        "install:all": "npm install --workspaces",
+        "dev": "concurrently \"npm run watch --workspace back-end\" \"npm run dev --workspace front-end\""
+    },
+    "devDependencies": {
+        "concurrently": "^8.2.2"
+    }
+}
